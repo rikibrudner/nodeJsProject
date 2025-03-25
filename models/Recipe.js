@@ -11,7 +11,7 @@ const RecipeSchema = new mongoose.Schema({
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true },
     preparationTime: { type: Number, required: true }, 
     difficulty: { type: Number, min: 1, max: 5, required: true },
-    dateAdded: { type: Date, default: Date.now },
+    dateAdded: { type: Date, default: Date.now() },
     layers: { type: [LayerSchema], required: true },
     preparationInstructions: { type: String, required: true },
     isPrivate: { type: Boolean, default: false },
